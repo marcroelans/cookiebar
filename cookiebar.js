@@ -167,6 +167,7 @@ var Cookiebar = (function () {
     if (langObj.infoUrl !== undefined && langObj.infoUrl !== '') {
 
       var moreButton = document.createElement('a');
+      a.setAttribute('href', infoUrl);
       moreButton.classList.add('cookiebar-more');
 
       if (langObj.infoText !== undefined && langObj.infoText !== '') {

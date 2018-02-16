@@ -143,15 +143,16 @@ var Cookiebar = (function () {
     cookiebar_inside.classList.add('cookiebar-inside');
     cookiebar.appendChild(cookiebar_inside);
 
-    var button_container = document.createElement('div');
-    button_container.classList.add('cookiebar-buttons');
-    cookiebar_inside.appendChild(button_container);
 
     var langObj = getLanguageObject();
 
     var text = document.createElement('p');
     text.innerText = langObj.text;
     cookiebar_inside.appendChild(text);
+
+    var button_container = document.createElement('div');
+    button_container.classList.add('cookiebar-buttons');
+    cookiebar_inside.appendChild(button_container);
 
     var acceptButton = document.createElement('button');
     acceptButton.classList.add('cookiebar-accept');

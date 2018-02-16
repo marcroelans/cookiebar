@@ -41,3 +41,17 @@ If you have a site where you have more infos.
 __moreURL__ {String} - href to the site
 
 __moreText__ {String} - the Text that is shown in this link
+
+For example 
+
+``` javascript
+
+  Cookiebar.addLanguageObject(
+    {
+      lang: ['en'],
+      text: 'This site uses cookies',
+      close: 'Okay'
+    }
+  )
+
+```

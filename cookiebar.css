@@ -1,0 +1,40 @@
+/**
+  * Cookiebar - Styles
+  *
+  * @author Jan-Markus
+  */
+
+  .cookiebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.25rem;
+    text-align: center;
+    line-height: 1.5;
+    background-color: white;
+    color: black;
+  }
+  .cookiebar .text {
+    padding: 0;
+    margin: 0;
+  }
+  .cookiebar .buttoncontainer {
+    margin-top: 0.625rem;
+  }
+  .cookiebar .button {
+    display: inline-block;
+    padding: 0.3125rem 1.25rem;
+    margin: 0 0.625rem;
+    font-size: 1rem;
+    text-decoration: none;
+    border: 0;
+    color: white;
+    cursor: pointer;
+  }
+  .cookiebar .accept {
+    background-color: #27ae60;
+  }
+  .cookiebar .more {
+    background-color: #2980b9;
+  }

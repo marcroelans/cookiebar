@@ -1,0 +1,26 @@
+{
+  "name": "cookiebar",
+  "version": "1.0.0",
+  "description": "Simple Vanilla JS cookiebar.",
+  "main": "cookiebar.js",
+  "scripts": {
+    "bundle": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janmarkuslanger/cookiebar.git"
+  },
+  "keywords": [
+    "cookiebar"
+  ],
+  "author": "Jan-Markus Langer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/janmarkuslanger/cookiebar/issues"
+  },
+  "homepage": "https://github.com/janmarkuslanger/cookiebar#readme",
+  "devDependencies": {
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-uglify": "^3.0.0"
+  }
+}

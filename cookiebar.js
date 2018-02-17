@@ -124,7 +124,7 @@ var Cookiebar = (function () {
     */
   var addLanguageObject = function addLanguageObject (langObj) {
 
-    data.push(langObj);
+    data.unshift(langObj);
 
   }
 
@@ -140,22 +140,23 @@ var Cookiebar = (function () {
     cookiebar.classList.add('cookiebar');
 
     var cookiebar_inside = document.createElement('div');
-    cookiebar_inside.classList.add('cookiebar-inside');
+    cookiebar_inside.classList.add('inside');
     cookiebar.appendChild(cookiebar_inside);
 
 
     var langObj = getLanguageObject();
 
     var text = document.createElement('p');
+    text.classList.add('text');
     text.innerText = langObj.text;
     cookiebar_inside.appendChild(text);
 
     var button_container = document.createElement('div');
-    button_container.classList.add('cookiebar-buttons');
+    button_container.classList.add('buttoncontainer');
     cookiebar_inside.appendChild(button_container);
 
     var acceptButton = document.createElement('button');
-    acceptButton.classList.add('cookiebar-accept');
+    acceptButton.classList.add('button', 'accept');
     acceptButton.innerText = langObj.close;
     button_container.appendChild(acceptButton);
     acceptButton.addEventListener('click', function(){
@@ -167,8 +168,8 @@ var Cookiebar = (function () {
     if (langObj.infoUrl !== undefined && langObj.infoUrl !== '') {
 
       var moreButton = document.createElement('a');
-      a.setAttribute('href', infoUrl);
-      moreButton.classList.add('cookiebar-more');
+      moreButton.setAttribute('href', langObj.infoUrl);
+      moreButton.classList.add('button', 'more');
 
       if (langObj.infoText !== undefined && langObj.infoText !== '') {
         moreButton.innerText = langObj.infoText;
@@ -194,7 +195,7 @@ var Cookiebar = (function () {
 
     var cookieVal = getCookieValue();
 
-    if (cookieVal === '' || cookieVal === 0) {
+    if (cookieVal === '' || cookieVal === '0') {
       renderCookiebar()
     }
 

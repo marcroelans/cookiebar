@@ -1,4 +1,4 @@
-# cookiebar
+# cookiebar 🍪
 
 A really simple cookiebar plugin.
 

@@ -68,6 +68,11 @@ var Cookiebar = (function () {
       lang: ['en', 'en-US', 'en-EG', 'en-AU', 'en-GB', 'en-CA', 'en-NZ', 'en-IE', 'en-ZA', 'en-JM', 'en-BZ', 'en-TT'],
       text: 'This Site uses Cookies.',
       close: 'Accept!'
+    },
+    {
+      lang: ['pl', 'pl-PL'],
+      text: 'Ta strona używa ciasteczek.',
+      close: 'Akceptuj!'
     }
   ];
 

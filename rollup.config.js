@@ -3,9 +3,9 @@ import uglify from 'rollup-plugin-uglify';
 // rollup.config.js
 export default [
   {
-    input: 'cookiebar.js',
+    input: './cookiebar.js',
     output: {
-      file: 'cookiebar.min.js',
+      file: './cookiebar.min.js',
       format: 'cjs',
     },
     plugins: [

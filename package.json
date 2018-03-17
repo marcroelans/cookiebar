@@ -5,7 +5,7 @@
   "main": "cookiebar.js",
   "scripts": {
     "build": "babel cookiebar-src.js --out-file cookiebar.js",
-    "bundle": "rollup -c"
+    "minify": "minify cookiebar.js --out-file cookiebar.min.js"
   },
   "repository": {
     "type": "git",
@@ -20,20 +20,15 @@
     "url": "https://github.com/janmarkuslanger/cookiebar/issues"
   },
   "homepage": "https://github.com/janmarkuslanger/cookiebar#readme",
-  "devDependencies": {
+    "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.2",
     "babel-preset-env": "^1.6.1",
+    "babel-minify": "^0.3.0",
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.4.0",
-    "jasmine-core": "^3.1.0",
-    "karma": "^2.0.0",
-    "karma-chrome-launcher": "^2.2.0",
-    "karma-jasmine": "^1.1.1",
-    "rollup-plugin-babel": "^3.0.3",
-    "rollup-plugin-uglify": "^3.0.0"
+    "eslint-plugin-react": "^7.4.0"
   }
 }

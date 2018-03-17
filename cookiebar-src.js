@@ -1,102 +1,72 @@
-/**
-  * Lighweight cookiebar
-  *
-  * @author Jan-Markus Langer
-  * @license MIT
-  */
-
-var Cookiebar = (function () {
-
+const Cookiebar = (function Cookiebar() {
+  /**
+    * Lighweight vanilla js cookiebar
+    *
+    * @author Jan-Markus Langer
+    * @license MIT
+    */
 
   /**
     * version
     *
-    * @type {String}
+    * @type {string}
     */
-  version = '1.0.0';
-
-
-  /**
-    *
-    * Utility
-    *
-    */
-
-
-  /**
-    * check if item is in Array
-    *
-    * @private
-    * @param {Array} langArray
-    * @param {String}
-    */
-  var isInArray = function isInArray (langArray, item) {
-    for (var i = 0; i < langArray.length; i++) {
-      if (langArray[i] === item) {
-        return true;
-      }
-    }
-    return false;
-  };
+  const version = '1.0.0';
 
   /**
     * mount
     *
     * @type {dom}
     */
-  var mount = document.body;
+  const mount = document.body;
+
+  /**
+    * default data
+    */
+  const defaultData = {
+    template: '<p>This Site uses Cookies.</p><button data-cookiebar-close>Accept!</button>',
+  }
 
   /**
     * data
     *
-    * @type {Array}
+    * @type {array}
     */
-
-  var defaultData = {
-    lang: ['en', 'en-US', 'en-EG', 'en-AU', 'en-GB', 'en-CA', 'en-NZ', 'en-IE', 'en-ZA', 'en-JM', 'en-BZ', 'en-TT'],
-    text: 'This Site uses Cookies.',
-    close: 'Accept!'
-  };
-
-  var data = [
+  const langData = [
     {
+      name: 'german',
       lang: ['de-CH', 'de-AT', 'de-LU', 'de-LI', 'de'],
-      text: 'Diese Seite benutzt Cookies.',
-      close: 'Einverstanden!'
+      template: '<p>Diese Seite benutzt Cookies.</p><button data-cookiebar-close>Einverstanden!</button>',
     },
     {
+      name: 'english',
       lang: ['en', 'en-US', 'en-EG', 'en-AU', 'en-GB', 'en-CA', 'en-NZ', 'en-IE', 'en-ZA', 'en-JM', 'en-BZ', 'en-TT'],
-      text: 'This Site uses Cookies.',
-      close: 'Accept!'
+      template: '<p>This Site uses Cookies.</p><button data-cookiebar-close>Accept!</button>',
     },
     {
+      name: 'polish',
       lang: ['pl', 'pl-PL'],
-      text: 'Ta strona używa ciasteczek.',
-      close: 'Akceptuj!'
-    }
+      template: '<p>Ta strona używa ciasteczek.</p><button data-cookiebar-close>Akceptuj!</button>',
+    },
   ];
 
-
   /**
-    * get cookie value
+    * get cookie getcookie
     *
-    * @return {String}
+    * @returns {string}
     */
-  var getCookieValue = function getCookieValue () {
-    var cookieAccepted = document.cookie.replace(/(?:(?:^|.*;\s*)cookieAccepted\s*\=\s*([^;]*).*$)|^.*$/, '$1');
-    return cookieAccepted;
+  const getCookieValue = function getCookieValue() {
+    return document.cookie.replace(/(?:(?:^|.*;\s*)cookieAccepted\s*\=\s*([^;]*).*$)|^.*$/, '$1');
   };
-
 
   /**
     * set cookie value
     *
     * @param {String} value
     */
-  var setCookieValue = function setCookieValue (value) {
-    document.cookie = value;
+  const setCookieValue = function setCookieValue() {
+    document.cookie = 'cookieAccepted=1;';
   };
-
 
   /**
     * get current language object
@@ -104,115 +74,60 @@ var Cookiebar = (function () {
     * @private
     * @return {Object}
     */
-  var getLanguageObject = function getLanguageObject () {
+  const getLanguageTemplate = function getLanguageTemplate() {
 
-    var lang = navigator.language;
+    const lang = navigator.language;
 
-    for (var i = 0; i < data.length; i++) {
-
-      if (isInArray(data[i].lang, lang)) {
-        return data[i];
-      }
-
-    }
-
-    return defaultData;
-
+    const resultLang = langData.filter(dataItem => dataItem.lang.indexOf(lang) > -1);
+    return resultLang.length > 0 ? resultLang : defaultData;
   };
 
-
   /**
-    * add language object
-    *
-    * @public
-    * @param {Object}
+    * renderCookiebar
     */
-  var addLanguageObject = function addLanguageObject (langObj) {
-
-    data.unshift(langObj);
-
-  }
-
-
-  /**
-    * render Cookiebar
-    *
-    * @private
-    */
-  var renderCookiebar = function renderCookiebar () {
-
-    var cookiebar = document.createElement('div');
+  const renderCookie = function renderCookie() {
+    // cookiebar
+    const cookiebar = document.createElement('div');
     cookiebar.classList.add('cookiebar');
 
-    var cookiebar_inside = document.createElement('div');
-    cookiebar_inside.classList.add('inside');
-    cookiebar.appendChild(cookiebar_inside);
+    // cookiebar innerHTML
+    cookiebar.innerHTML = getLanguageTemplate()[0].template;
 
-
-    var langObj = getLanguageObject();
-
-    var text = document.createElement('p');
-    text.classList.add('text');
-    text.innerText = langObj.text;
-    cookiebar_inside.appendChild(text);
-
-    var button_container = document.createElement('div');
-    button_container.classList.add('buttoncontainer');
-    cookiebar_inside.appendChild(button_container);
-
-    var acceptButton = document.createElement('button');
-    acceptButton.classList.add('button', 'accept');
-    acceptButton.innerText = langObj.close;
-    button_container.appendChild(acceptButton);
-    acceptButton.addEventListener('click', function(){
-      setCookieValue('cookieAccepted=1');
+    cookiebar.querySelector('[data-cookiebar-close]').addEventListener('click', () => {
       cookiebar.outerHTML = '';
-    })
+      setCookieValue();
+    });
 
-
-    if (langObj.infoUrl !== undefined && langObj.infoUrl !== '') {
-
-      var moreButton = document.createElement('a');
-      moreButton.setAttribute('href', langObj.infoUrl);
-      moreButton.classList.add('button', 'more');
-
-      if (langObj.infoText !== undefined && langObj.infoText !== '') {
-        moreButton.innerText = langObj.infoText;
-      } else {
-        moreButton.innerText = 'Ok';
-      }
-
-      button_container.appendChild(moreButton)
-
-    }
-
-    mount.appendChild(cookiebar)
-
+    mount.appendChild(cookiebar);
   };
 
-
   /**
-    * Init
+    * init the cookiebar
     *
-    * @public
     */
-  var init = function init () {
-
-    var cookieVal = getCookieValue();
-
-    if (cookieVal === '' || cookieVal === '0') {
-      renderCookiebar()
+  const init = function init() {
+    if (getCookieValue() === '') {
+      renderCookie();
     }
-
-  }
-
-
-  // Export
+  };
 
   return {
-    mount: mount,
-    addLanguageObject: addLanguageObject,
-    init: init
+    version,
+    init,
   }
 
 }());
+
+// https://gist.github.com/gillesruppert/4564755
+if (typeof define === 'function' && define.amd) {
+  define(() =>{
+    return Cookiebar;
+  });
+} else if (typeof exports !== 'undefined') {
+  if (typeof module !== 'undefined' && module.exports) {
+    exports = module.exports = Cookiebar;
+  }
+  exports.Cookiebar = Cookiebar;
+} else {
+  window.Cookiebar = Cookiebar;
+}

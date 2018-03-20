@@ -50,6 +50,6 @@ you can append the cookiebar where you want to.
 ## Thanks to
 
 - karolsw2
-- devmount
+- <a href="https://github.com/devmount">devmount</a>
 
 for the contribution

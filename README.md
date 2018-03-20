@@ -17,7 +17,13 @@ You can put the script tag into the body, or import it via CommonJS or AMD.
 
 ## Language Support
 
-Currently support languages. If you want to help then fork this repo and add your language to
+Currently support languages. 
+
+- englisch
+- germany
+- polish
+
+If you want to help then fork this repo and add your language to
 the langData array in cookiebar-src.js like this.
 
 ``` javascript

@@ -1,6 +1,6 @@
 # cookiebar 🍪
 
-A really simple cookiebar plugin. The plugin detects the browser language via navigator.language.
+A really simple cookiebar plugin. The plugin detects the browser language via `navigator.language`.
 
 
 ## Install
@@ -11,20 +11,20 @@ You can put the script tag into the body, or import it via CommonJS or AMD.
 
 ``` javascript
 
-  cookiebar.init();
+cookiebar.init();
 
 ```
 
 ## Language Support
 
-Currently support languages. 
+Currently supported languages:
 
-- englisch
-- germany
-- polish
+- English
+- German
+- Polish
 
 If you want to help then fork this repo and add your language to
-the langData array in cookiebar-src.js like this.
+the langData array in [cookiebar-src.js](cookiebar-src.js) like this.
 
 ``` javascript
 {
@@ -36,7 +36,7 @@ the langData array in cookiebar-src.js like this.
 
 ## mount
 
-By default the cookiebar appends to the document.body
+By default the cookiebar appends to the `document.body`
 
 With
 
@@ -50,4 +50,4 @@ you can append the cookiebar where you want to.
 
 - karolsw2
 
-for the constribution
+for the contribution

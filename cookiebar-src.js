@@ -35,7 +35,7 @@ const Cookiebar = (function Cookiebar() {
   const langData = [
     {
       name: 'german',
-      lang: ['de-CH', 'de-AT', 'de-LU', 'de-LI', 'de'],
+      lang: ['de', 'de-DE', 'de-CH', 'de-AT', 'de-LU', 'de-LI'],
       template: '<p>Diese Seite benutzt Cookies.</p><button data-cookiebar-close>Einverstanden!</button>',
     },
     {
@@ -47,6 +47,11 @@ const Cookiebar = (function Cookiebar() {
       name: 'polish',
       lang: ['pl', 'pl-PL'],
       template: '<p>Ta strona używa ciasteczek.</p><button data-cookiebar-close>Akceptuj!</button>',
+    },
+    {
+      name: 'french',
+      lang: ['fr', 'fr-FR'],
+      template: '<p>Ce site utilise des cookies.</p><button data-cookiebar-close>D\'accord!</button>',
     },
   ];
 

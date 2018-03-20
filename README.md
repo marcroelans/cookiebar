@@ -22,6 +22,7 @@ Currently supported languages:
 - English
 - German
 - Polish
+- French
 
 If you want to help then fork this repo and add your language to
 the langData array in [cookiebar-src.js](cookiebar-src.js) like this.
@@ -49,5 +50,6 @@ you can append the cookiebar where you want to.
 ## Thanks to
 
 - karolsw2
+- devmount
 
 for the contribution

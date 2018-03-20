@@ -27,13 +27,14 @@ var Cookiebar = function Cookiebar() {
     */
   var defaultData = {
     template: '<p>This Site uses Cookies.</p><button data-cookiebar-close>Accept!</button>'
+  };
 
-    /**
-      * data
-      *
-      * @type {array}
-      */
-  };var langData = [{
+  /**
+    * data
+    *
+    * @type {array}
+    */
+  var langData = [{
     name: 'german',
     lang: ['de-CH', 'de-AT', 'de-LU', 'de-LI', 'de'],
     template: '<p>Diese Seite benutzt Cookies.</p><button data-cookiebar-close>Einverstanden!</button>'
@@ -72,7 +73,6 @@ var Cookiebar = function Cookiebar() {
     * @return {Object}
     */
   var getLanguageTemplate = function getLanguageTemplate() {
-
     var lang = navigator.language;
 
     var resultLang = langData.filter(function (dataItem) {

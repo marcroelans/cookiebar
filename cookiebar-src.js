@@ -25,7 +25,7 @@ const Cookiebar = (function Cookiebar() {
     */
   const defaultData = {
     template: '<p>This Site uses Cookies.</p><button data-cookiebar-close>Accept!</button>',
-  }
+  };
 
   /**
     * data
@@ -75,7 +75,6 @@ const Cookiebar = (function Cookiebar() {
     * @return {Object}
     */
   const getLanguageTemplate = function getLanguageTemplate() {
-
     const lang = navigator.language;
 
     const resultLang = langData.filter(dataItem => dataItem.lang.indexOf(lang) > -1);
@@ -114,8 +113,7 @@ const Cookiebar = (function Cookiebar() {
   return {
     version,
     init,
-  }
-
+  };
 }());
 
 // https://gist.github.com/gillesruppert/4564755

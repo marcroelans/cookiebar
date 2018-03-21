@@ -53,6 +53,11 @@ const Cookiebar = (function Cookiebar() {
       lang: ['fr', 'fr-FR'],
       template: '<p>Ce site utilise des cookies.</p><button data-cookiebar-close>D\'accord!</button>',
     },
+    {
+      name: 'chinese',
+      lang: ['zh-CN', 'zh-HK', 'zh-MO', 'zh-SG', 'zh-TW', 'zh-CHS', 'zh-CHT'],
+      template: '<p>這個網站使用 Cookies.</p><button data-cookiebar-close>接受!</button>'
+    }
   ];
 
   /**

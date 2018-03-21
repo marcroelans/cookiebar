@@ -1,6 +1,6 @@
 const Cookiebar = (function Cookiebar() {
   /**
-    * Lighweight vanilla js cookiebar
+    * Lightweight vanilla js cookiebar
     *
     * @author Jan-Markus Langer
     * @license MIT

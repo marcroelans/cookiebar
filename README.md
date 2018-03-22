@@ -23,6 +23,7 @@ Currently supported languages:
 - German
 - Polish
 - French
+- Chinese
 
 If you want to help then fork this repo and add your language to
 the langData array in [cookiebar-src.js](cookiebar-src.js) like this.
@@ -51,5 +52,6 @@ you can append the cookiebar where you want to.
 
 - karolsw2
 - <a href="https://github.com/devmount">devmount</a>
+- <a href="https://github.com/jonathanleeee">jonathanleeee</a>
 
 for the contribution

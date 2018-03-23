@@ -57,6 +57,11 @@ const Cookiebar = (function Cookiebar() {
       name: 'chinese',
       lang: ['zh-CN', 'zh-HK', 'zh-MO', 'zh-SG', 'zh-TW', 'zh-CHS', 'zh-CHT'],
       template: '<p>這個網站使用 Cookies.</p><button data-cookiebar-close>接受!</button>'
+    },
+    {
+      name: 'dansk',
+      lang: ['da'],
+      template: '<p>Denne side anvender cookies.</p><button data-cookiebar-close>Enige!</button>'
     }
   ];
 

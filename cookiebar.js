@@ -2,7 +2,7 @@
 
 var Cookiebar = function Cookiebar() {
   /**
-    * Lighweight vanilla js cookiebar
+    * Lightweight vanilla js cookiebar
     *
     * @author Jan-Markus Langer
     * @license MIT
@@ -50,6 +50,14 @@ var Cookiebar = function Cookiebar() {
     name: 'french',
     lang: ['fr', 'fr-FR'],
     template: '<p>Ce site utilise des cookies.</p><button data-cookiebar-close>D\'accord!</button>'
+  }, {
+    name: 'chinese',
+    lang: ['zh-CN', 'zh-HK', 'zh-MO', 'zh-SG', 'zh-TW', 'zh-CHS', 'zh-CHT'],
+    template: '<p>這個網站使用 Cookies.</p><button data-cookiebar-close>接受!</button>'
+  }, {
+    name: 'dansk',
+    lang: ['da'],
+    template: '<p>Denne side anvender cookies.</p><button data-cookiebar-close>Enige!</button>'
   }];
 
   /**

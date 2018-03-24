@@ -1,5 +1,9 @@
 # cookiebar 🍪
 
+<p align="center">
+  <img src="http://img.badgesize.io/janmarkuslanger/cookiebar/master/cookiebar.min.js.svg">
+</p>
+
 A really simple cookiebar plugin. The plugin detects the browser language via `navigator.language`.
 
 

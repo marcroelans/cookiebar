@@ -1,6 +1,6 @@
 # cookiebar 🍪
 
-<p align="center">
+<p align="left">
   <img src="http://img.badgesize.io/janmarkuslanger/cookiebar/master/cookiebar.min.js.svg">
 </p>
 

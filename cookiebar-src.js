@@ -62,6 +62,11 @@ const Cookiebar = (function Cookiebar() {
       name: 'dansk',
       lang: ['da'],
       template: '<p>Denne side anvender cookies.</p><button data-cookiebar-close>Enige!</button>'
+    },
+    {
+      name: 'spanish',
+      lang: ['es'],
+      template: '<p>Este sitio usa Cookies.</p><button data-cookiebar-close>¡Aceptar!</button>'
     }
   ];
 

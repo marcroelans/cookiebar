@@ -58,5 +58,6 @@ you can append the cookiebar where you want to.
 - <a href="https://github.com/devmount">devmount</a>
 - <a href="https://github.com/jonathanleeee">jonathanleeee</a>
 - <a href="https://github.com/naitszox">naitszox</a>
+- <a href="https://github.com/onmax">onmax</a>
 
 for the contribution

@@ -29,6 +29,7 @@ Currently supported languages:
 - French
 - Chinese
 - Spanish
+- Danish 
 
 If you want to help then fork this repo and add your language to
 the langData array in [cookiebar-src.js](cookiebar-src.js) like this.

@@ -1,8 +1,8 @@
 {
-  "name": "cookiebar",
+  "name": "cookiebarjs",
   "version": "1.0.0",
   "description": "Simple Vanilla JS cookiebar.",
-  "main": "cookiebar.js",
+  "main": "cookiebar.min.js",
   "scripts": {
     "build": "babel cookiebar-src.js --out-file cookiebar.js",
     "minify": "minify cookiebar.js --out-file cookiebar.min.js"

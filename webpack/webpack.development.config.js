@@ -4,9 +4,9 @@ module.exports = {
   mode: 'development',
   entry:  './src/index.js',
   output: {
-    library: 'Power',
+    library: 'Cookiebar',
     libraryTarget: "umd",
-    filename: 'power-dev.js',
+    filename: 'cookiebar-dev.js',
     path: path.resolve(__dirname, '../dist')
   },
   module: {

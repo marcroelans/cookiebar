@@ -4,9 +4,9 @@ module.exports = {
   mode: 'production',
   entry:  './src/index.js',
   output: {
-    library: 'Power',
+    library: 'Cookiebar',
     libraryTarget: "umd",
-    filename: 'power.js',
+    filename: 'cookiebar.js',
     path: path.resolve(__dirname, '../dist')
   },
   module: {

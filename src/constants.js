@@ -28,7 +28,9 @@ export const LANGUAGES = [
 export const LINKS = [
   {name: 'Google Fonts', type: 'link', keyword: 'fonts.googleapis'},
   {name: 'Fonts.com', type: 'link', keyword: 'fast.fonts.net'},
-  {name: 'Fonts.com', type: 'script', keyword: 'fast.fonts.net'}
+  {name: 'Fonts.com', type: 'script', keyword: 'fast.fonts.net'},
+  {name: 'jQuery', type: 'script', keyword: 'code.jquery.com'},
+  {name: 'Less JS', type: 'script', keyword: 'cdnjs.cloudflare.com/ajax/libs/less.js'}
 ];
 
 export const TAG_ATTRIBUTES = {

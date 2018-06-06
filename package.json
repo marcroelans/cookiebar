@@ -16,5 +16,8 @@
     "babel-loader": "^8.0.0-beta.2",
     "webpack": "^4.4.1",
     "webpack-cli": "^2.0.9"
+  },
+  "dependencies": {
+    "js-cookie": "^2.2.0"
   }
 }

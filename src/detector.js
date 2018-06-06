@@ -28,16 +28,23 @@ export const getScripts = () => {
     const type = link.type;
 
     // Element attribute
-    const attribute = TAG_ATTRIBUTES[type];
+    let attribute = TAG_ATTRIBUTES[type];
 
     // get all Elements with the type in DOM
     const elements = [].slice.call(document.querySelectorAll(type));
 
     for (let element of elements) {
+
+      if( element.getAttribute(attribute) === null &&
+          element.innerHTML.includes(link.keyword)) {
+            isIncluded = true;
+      }
+
       if( element.getAttribute(attribute) !== null &&
           element.getAttribute(attribute).includes(link.keyword)) {
             isIncluded = true;
       }
+
     }
 
     if(isIncluded) {

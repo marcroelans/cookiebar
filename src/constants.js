@@ -30,7 +30,12 @@ export const LINKS = [
   {name: 'Fonts.com', type: 'link', keyword: 'fast.fonts.net'},
   {name: 'Fonts.com', type: 'script', keyword: 'fast.fonts.net'},
   {name: 'jQuery', type: 'script', keyword: 'code.jquery.com'},
-  {name: 'Less JS', type: 'script', keyword: 'cdnjs.cloudflare.com/ajax/libs/less.js'}
+  {name: 'Less JS', type: 'script', keyword: 'cdnjs.cloudflare.com/ajax/libs/less.js'},
+  {name: 'Google Analytics', type: 'script', keyword: "ga('create'"},
+  {name: 'Crazy Egg', type: 'script', keyword: '//script.crazyegg.com'},
+  {name: 'Facebook Pixel', type: 'script', keyword: 'connect.facebook.net'},
+  {name: 'Trusted Shops', type: 'script', keyword: 'trustedshops.com/js'},
+  {name: 'Findologic', type: 'script', keyword: 'cdn.findologic.com/'}
 ];
 
 export const TAG_ATTRIBUTES = {

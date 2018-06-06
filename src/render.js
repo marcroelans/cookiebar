@@ -5,6 +5,8 @@
 import { getLanguage } from './languages';
 import { removeElement } from './utils';
 
+var Cookie = require('js-cookie');
+
 /**
   * returns the html list of the script list
   *
@@ -74,7 +76,7 @@ const renderCloseButton = cookiebar => {
 
   button.addEventListener('click', () => {
     removeElement(cookiebar);
-    // TODO: set cookie
+    Cookie.set('cookieAccepted', '1');
   })
 
   return button;

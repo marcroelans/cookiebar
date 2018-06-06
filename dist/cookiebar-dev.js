@@ -139,7 +139,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.init = void 0;\n\nvar _detector = __webpack_require__(/*! ./detector.js */ \"./src/detector.js\");\n\nvar _render = __webpack_require__(/*! ./render.js */ \"./src/render.js\");\n\n/**\r\n  * index.js\r\n  */\nvar Cookie = __webpack_require__(/*! js-cookie */ \"./node_modules/js-cookie/src/js.cookie.js\");\n/**\r\n  * Init the cookiebarjs\r\n  */\n\n\nvar init = function init(mount) {\n  var cookieAccepted = Cookie.get('cookieAccepted');\n  var root = mount || document.body;\n\n  if (cookieAccepted !== '0') {\n    (0, _render.renderCookiebar)((0, _detector.getScripts)(), root);\n  }\n};\n\nexports.init = init;\n\n//# sourceURL=webpack://Cookiebar/./src/index.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.init = void 0;\n\nvar _detector = __webpack_require__(/*! ./detector.js */ \"./src/detector.js\");\n\nvar _render = __webpack_require__(/*! ./render.js */ \"./src/render.js\");\n\n/**\r\n  * index.js\r\n  */\nvar Cookie = __webpack_require__(/*! js-cookie */ \"./node_modules/js-cookie/src/js.cookie.js\");\n/**\r\n  * Init the cookiebarjs\r\n  */\n\n\nvar init = function init(mount) {\n  var cookieAccepted = Cookie.get('cookieAccepted');\n  var root = mount || document.body;\n\n  if (cookieAccepted !== '1') {\n    (0, _render.renderCookiebar)((0, _detector.getScripts)(), root);\n  }\n};\n\nexports.init = init;\n\n//# sourceURL=webpack://Cookiebar/./src/index.js?");
 
 /***/ }),
 

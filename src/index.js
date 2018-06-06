@@ -16,7 +16,7 @@ const init = (mount) => {
 
   const root = mount || document.body;
 
-  if(cookieAccepted !== '0') {
+  if(cookieAccepted !== '1') {
     renderCookiebar(getScripts(), root);
   }
 

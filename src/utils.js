@@ -8,7 +8,7 @@
     * @param {*} expectedString
     * @returns {Boolean}
     */
-  export const isString = expectedString => typeof expectedString === 'string';
+export const isString = expectedString => typeof expectedString === 'string';
 
 /**
   * validate an Array

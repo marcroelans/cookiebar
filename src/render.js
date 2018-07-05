@@ -68,10 +68,11 @@ const renderMainText = () => {
   * @param {VNODE} cookiebar
   * @returns {VNODE}
   */
-const renderCloseButton = cookiebar => {
+  const renderCloseButton = cookiebar => {
 
-  const button = document.createElement('button');
-  const text = document.createTextNode(getLanguage().buttonText);
+    const button = document.createElement('button');
+    button.classList.add('button');
+    const text = document.createTextNode(getLanguage().buttonText);
   button.appendChild(text);
 
   button.addEventListener('click', () => {

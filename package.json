@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --config webpack/webpack.production.config.js",
     "dev": "webpack --config webpack/webpack.development.config.js",
-    "watch": "webpack --watch --config webpack/webpack.development.config.js"
+    "watch": "webpack --watch --config webpack/webpack.development.config.js",
+    "styles": "lessc ./styles/src/index.less ./styles/dist/styles.css"
   },
   "author": "NEULAND. Medienagentur",
   "license": "MIT",
@@ -14,6 +15,7 @@
     "@babel/core": "^7.0.0-beta.42",
     "@babel/preset-env": "^7.0.0-beta.42",
     "babel-loader": "^8.0.0-beta.2",
+    "less": "^3.0.4",
     "webpack": "^4.4.1",
     "webpack-cli": "^2.0.9"
   },
